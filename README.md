@@ -35,3 +35,15 @@ Build a Client Side Web Framework - TypeScript
   - Build a class User as a 'mega' class with tons of methods
   - Refactor User to use composition
   - Refactor User to be a reusable class that can represent any piece of data, not just a User
+
+### RESTful conventions
+
+GET -> /posts -> Retrieve all posts
+GET -> /posts/:id -> Retrieve post with the given ID
+POST -> /posts -> Create a new post
+PUT -> /posts/:id -> Update a post
+DELETE -> /posts/:id -> Delete a post
+
+Resources:
+
+- [REST](https://restfulapi.net/resource-naming/) Resource API Tutorial
