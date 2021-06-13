@@ -4,8 +4,9 @@ Build a Client Side Web Framework - TypeScript
 
 ## Tech Stack
 
-- JavaScript
+- JavaScript OOP
 - TypeScript
+- Json-Server
 
 ## Planning and Implementation
 
@@ -19,18 +20,30 @@ Build a Client Side Web Framework - TypeScript
   - User needs to have the ability to notify the rest of the app when some data is changed
   - User needs to be able to persist data to an outside server and then retrieve it
   ***
-  | class User                              |
-  | --------------------------------------- |
-  | private data: UserProps                 |
-  | get(propName: string):                  |
-  | set(update: UserProps): void            |
+  |               class User                |
+  | :-------------------------------------: |
+  |         private data: UserProps         |
+  |         get(propName: string):          |
+  |      set(update: UserProps): void       |
   | on(eventName: string, callback: ()=>{}) |
-  | trigger(eventName:string): void         |
-  | fetch(): Promie                         |
-  | save(): Promise                         |
+  |     trigger(eventName:string): void     |
+  |             fetch(): Promie             |
+  |             save(): Promise             |
   |                                         |
 - View Classes -> Handle HTML and events caused by user(like clicks)
 - Extraction Approach
   - Build a class User as a 'mega' class with tons of methods
   - Refactor User to use composition
   - Refactor User to be a reusable class that can represent any piece of data, not just a User
+
+### RESTful conventions
+
+GET -> /posts -> Retrieve all posts
+GET -> /posts/:id -> Retrieve post with the given ID
+POST -> /posts -> Create a new post
+PUT -> /posts/:id -> Update a post
+DELETE -> /posts/:id -> Delete a post
+
+Resources:
+
+- [REST](https://restfulapi.net/resource-naming/) Resource API Tutorial
